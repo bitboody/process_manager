@@ -4,8 +4,9 @@
 #include <windows.h>
 #include <tlhelp32.h>
 
+#include "util.h"
+
 void prompt();
-void read_input(char *buffer, size_t size);
 int process_list();
 int process_kill(DWORD pid);
 
@@ -37,14 +38,6 @@ void prompt()
     }
 
     return;
-}
-
-void read_input(char *buffer, size_t size)
-{
-    if (fgets(buffer, size, stdin))
-    {
-        buffer[strcspn(buffer, "\n")] = 0;
-    }
 }
 
 int process_list()

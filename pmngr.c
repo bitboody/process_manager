@@ -79,7 +79,7 @@ int process_kill(DWORD pid)
         return -1;
     }
 
-    printf("Killing process %lu\n...", pid);
+    printf("Killing process %lu...\n", pid);
 
     if (TerminateProcess(process, 0))
     {

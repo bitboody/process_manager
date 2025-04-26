@@ -1,7 +1,15 @@
 # process_manager
-Terminal based process manager for Windows
+Terminal-based process manager for Windows.
 
-Compiling:
+## Requirements
+- [CMake](https://cmake.org/) installed
+- GCC (MinGW) compiler installed and added to your system PATH
+
+## Compiling
+
 ```sh
-gcc pmngr.c -lkernel32
+mkdir build
+cd build
+cmake -G "MinGW Makefiles" ..
+cmake --build .
 ```
